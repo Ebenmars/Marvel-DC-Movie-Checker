@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DC Movie Checker</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            background-image: url(./images/DC_Universe_001.webp);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .mainInfo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            background-color: brown;
+            border: 1px solid black;
+        }
+
+        h3 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 30px; 
+            
+            color:white;
+        }
+
+        button {
+            margin-top: 50px;
+            font-size: 15px;
+            border-radius: 5px;
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        textarea {
+            resize: none;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <h1>DC Checker</h1>
+    </nav>
+
+    <div class="mainInfo">
+        <h3 id="answer"></h3>
+        <textarea placeholder="Ex. Batman" rows="2" cols="30" id="userInput"></textarea>
+        <button onclick="findOut()">Find Out!!</button>
+        <script>
+            function findOut() {
+                let user = document.getElementById("userInput").value;
+                let map = {
+                    dc: [
+                        "Man of Steel",
+                        "Batman v Superman: Dawn of Justice",
+                        "Suicide Squad",
+                        "Wonder Woman",
+                        "Justice League",
+                        "Aquaman",
+                        "Shazam!",
+                        "Birds of Prey",
+                        "Wonder Woman 1984",
+                        "Zack Snyder's Justice League",
+                        "The Suicide Squad"
+                    ]
+                }
+
+                if (map.dc.some(movie => movie.toLowerCase() === user.toLowerCase())) {
+                    document.getElementById("answer").innerHTML = "Its A DC Movie";
+                }
+                else {
+                    document.getElementById("answer").innerHTML = "Not A DC Movie";
+
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
