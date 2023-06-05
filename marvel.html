@@ -9,12 +9,19 @@
     <style>
 
         @keyframes imagechange{
-            from{background-image: url(./images/marvel-characters.webp);}
-            to{background-image: url(./images/DC_Universe_001.webp);}
+            0%{background-image: url(./images/marvel-characters.webp);}
+            25%{background-image: url(./images/Marvel2.webp);}
+            50%{background-image: url(./images/Marvel3.webp);}
+            100% { background-color:url(./images/marvel-characters.webp); }
         }
         body {
             display: flex;
             flex-direction: column;
+            background-image: url(./images/marvel-characters.webp);
+            background-size: cover;
+            background-repeat: no-repeat;
+           animation-name:imagechange;
+           animation-duration: 8s;
         }
 
         .mainInfo {

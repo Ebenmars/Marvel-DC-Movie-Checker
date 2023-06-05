@@ -7,12 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DC Movie Checker</title>
     <style>
+
+@keyframes imagechange{
+            0%{background-image: url(./images/DC_Universe_001.webp);}
+            25%{background-image: url(./images/dc-hero_20220721_SDCC_62d87621a4d733.05089136_62ded671a6a2c2.47617848.jpg);}
+            50%{background-image: url(./images/Who_Owns_DC_Comics_1024x.webp);}
+            100%{background-image: url(./images/why-dc-universe-movies-franchise-needs-reboot-reset-james-gunn-studios.webp);}
+        }
+
         body {
             display: flex;
             flex-direction: column;
             background-image: url(./images/DC_Universe_001.webp);
             background-size: cover;
             background-repeat: no-repeat;
+            animation-name:imagechange;
+           animation-duration: 8s;
         }
 
         .mainInfo {
