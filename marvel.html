@@ -7,21 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marvel Movie Checker</title>
     <style>
+        @keyframes imagechange {
+            0% {
+                background-image: url(./images/marvel-characters.webp);
+            }
 
-        @keyframes imagechange{
-            0%{background-image: url(./images/marvel-characters.webp);}
-            25%{background-image: url(./images/Marvel2.webp);}
-            50%{background-image: url(./images/Marvel3.webp);}
-            100% { background-color:url(./images/marvel-characters.webp); }
+            25% {
+                background-image: url(./images/Marvel2.webp);
+            }
+
+            50% {
+                background-image: url(./images/Marvel3.webp);
+            }
+
+            100% {
+                background-color: url(./images/marvel-characters.webp);
+            }
         }
+
         body {
             display: flex;
             flex-direction: column;
             background-image: url(./images/marvel-characters.webp);
             background-size: cover;
             background-repeat: no-repeat;
-           animation-name:imagechange;
-           animation-duration: 8s;
+            animation-name: imagechange;
+            animation-duration: 8s;
         }
 
         .mainInfo {
@@ -40,9 +51,9 @@
             border: 1px solid black;
         }
 
-        h3{
-            font-family: 'Quicksand', sans-serif; 
-            color:white;
+        h3 {
+            font-family: 'Quicksand', sans-serif;
+            color: white;
         }
 
         button {
@@ -67,7 +78,7 @@
     <nav>
         <h1>Marvel Checker</h1>
     </nav>
-    
+
     <div class="mainInfo">
         <h3 id="answer"></h3>
         <textarea placeholder="Ex. Spider Man" rows="2" cols="30" id="userInput"></textarea>
@@ -84,36 +95,36 @@
                         "Captain America: The First Avenger",
                         "The Avengers",
                         "Iron Man 3",
-                        "Thor: The Dark World",
+                        "Thor The Dark World",
                         "Captain America: The Winter Soldier",
                         "Guardians of the Galaxy",
-                        "Avengers: Age of Ultron",
-                        "Ant-Man",
+                        "Avengers Age of Ultron",
+                        "AntMan",
                         "Captain America: Civil War",
                         "Doctor Strange",
                         "Guardians of the Galaxy Vol. 2",
                         "Spider-Man: Homecoming",
-                        "Thor: Ragnarok",
+                        "Thor Ragnarok",
                         "Black Panther",
-                        "Avengers: Infinity War",
+                        "Avengers Infinity War",
                         "Ant-Man and The Wasp",
                         "Captain Marvel",
-                        "Avengers: Endgame",
-                        "Spider-Man: Far From Home",
+                        "Avengers Endgame",
+                        "Spider-Man Far From Home",
                         "Black Widow",
                         "Shang-Chi and the Legend of the Ten Rings",
-
+                        "Eternals"
                     ]
                 }
 
-                if(map.marvel.some(movie => movie.toLowerCase() === user.toLowerCase())){
-                    document.getElementById("answer").innerHTML ="Its A Marvel Movie" ;
+                if (map.marvel.some(movie => movie.toLowerCase() === user.toLowerCase())) {
+                    document.getElementById("answer").innerHTML = "Its A Marvel Movie";
                 }
-                else{
-                    document.getElementById("answer").innerHTML ="Not A Marvel Movie";
+                else {
+                    document.getElementById("answer").innerHTML = "Not A Marvel Movie";
 
                 }
-    }
+            }
         </script>
     </div>
 </body>

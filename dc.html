@@ -7,12 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DC Movie Checker</title>
     <style>
+        @keyframes imagechange {
+            0% {
+                background-image: url(./images/DC_Universe_001.webp);
+            }
 
-@keyframes imagechange{
-            0%{background-image: url(./images/DC_Universe_001.webp);}
-            25%{background-image: url(./images/dc-hero_20220721_SDCC_62d87621a4d733.05089136_62ded671a6a2c2.47617848.jpg);}
-            50%{background-image: url(./images/Who_Owns_DC_Comics_1024x.webp);}
-            100%{background-image: url(./images/why-dc-universe-movies-franchise-needs-reboot-reset-james-gunn-studios.webp);}
+            25% {
+                background-image: url(./images/dc-hero_20220721_SDCC_62d87621a4d733.05089136_62ded671a6a2c2.47617848.jpg);
+            }
+
+            50% {
+                background-image: url(./images/Who_Owns_DC_Comics_1024x.webp);
+            }
+
+            100% {
+                background-image: url(./images/why-dc-universe-movies-franchise-needs-reboot-reset-james-gunn-studios.webp);
+            }
         }
 
         body {
@@ -21,8 +31,8 @@
             background-image: url(./images/DC_Universe_001.webp);
             background-size: cover;
             background-repeat: no-repeat;
-            animation-name:imagechange;
-           animation-duration: 8s;
+            animation-name: imagechange;
+            animation-duration: 8s;
         }
 
         .mainInfo {
@@ -37,15 +47,15 @@
             display: flex;
             justify-content: center;
             text-align: center;
-            background-color:darkgray;
+            background-color: darkgray;
             border: 1px solid black;
         }
 
         h3 {
             font-family: 'Quicksand', sans-serif;
-            font-size: 30px; 
-            
-            color:white;
+            font-size: 30px;
+
+            color: white;
         }
 
         button {
@@ -80,13 +90,35 @@
                 let user = document.getElementById("userInput").value;
                 let map = {
                     dc: [
+                        "Superman: The Movie",
+                        "Superman II",
+                        "Swamp Thing",
+                        "Superman III",
+                        "Supergirl",
+                        "Superman IV The Quest for Peace",
+                        "The Return of Swamp Thing",
+                        "Batman",
+                        "Batman Returns",
+                        "Batman Mask of the Phantasm",
+                        "Batman Forever",
+                        "Batman & Robin",
+                        "Steel",
+                        "Catwoman",
+                        "Constantine",
+                        "Batman Begins",
+                        "V for Vendetta",
+                        "Superman Returns",
+                        "Watchmen",
+                        "Jonah Hex",
+                        "Green Lantern",
+                        "The Dark Knight Rises",
                         "Man of Steel",
-                        "Batman v Superman: Dawn of Justice",
+                        "Batman vs Superman ",
                         "Suicide Squad",
                         "Wonder Woman",
                         "Justice League",
                         "Aquaman",
-                        "Shazam!",
+                        "Shazam",
                         "Birds of Prey",
                         "Wonder Woman 1984",
                         "Zack Snyder's Justice League",
